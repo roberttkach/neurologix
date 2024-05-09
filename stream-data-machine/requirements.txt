@@ -1,0 +1,6 @@
+apache-airflow==2.9.1
+alembic==1.13.1
+argcomplete==3.3.0
+fastapi==0.111.0
+pandas==2.2.2
+requests==2.31.0
