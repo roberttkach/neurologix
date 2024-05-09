@@ -45,3 +45,4 @@ process_data = PythonOperator(
 async def send_data(data: dict):
     response = requests.post('http://192.168.31.1/receive_data', data=json.dumps(data))
     return {"message": "Data sent", "response": response.text}
+
