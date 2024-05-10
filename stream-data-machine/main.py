@@ -3,11 +3,9 @@ import pandas as pd
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from fastapi import FastAPI
-import requests
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import http.client
 import json
-
-app = FastAPI()
 
 default_args = {
     'owner': 'airflow',
@@ -41,7 +39,31 @@ process_data = PythonOperator(
 )
 
 
-@app.post("/send_data")
-async def send_data(data: dict):
-    response = requests.post('http://192.168.31.1/receive_data', data=json.dumps(data))
-    return {"message": "Data sent", "response": response.text}
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        content_length = int(self.headers['Content-Length'])
+        post_data = self.rfile.read(content_length)
+        data = json.loads(post_data)
+
+        conn = http.client.HTTPConnection('192.168.31.1')
+        headers = {'Content-type': 'application/json'}
+        conn.request('POST', '/receive_data', json.dumps(data), headers)
+        response = conn.getresponse()
+        print(response.read().decode())
+
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Data sent")
+
+
+def handler(*args, **kwargs):
+    return RequestHandler(*args, **kwargs)
+
+
+def run(server_class=HTTPServer, handler_class=handler):
+    server_address = ('', 8000)
+    httpd = server_class(server_address, handler_class)
+    httpd.serve_forever()
+
+
+run()

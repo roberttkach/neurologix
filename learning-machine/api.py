@@ -1,11 +1,22 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import json
 
-app = FastAPI()
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        content_length = int(self.headers['Content-Length'])
+        post_data = self.rfile.read(content_length)
+        data = json.loads(post_data)
 
-class Item(BaseModel):
-    data: dict
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Data received: " + json.dumps(data).encode())
 
-@app.post("/receive_data")
-async def receive_data(item: Item):
-    return {"message": "Data received", "data": item.data}
+def handler(*args, **kwargs):
+    return RequestHandler(*args, **kwargs)
+
+def run(server_class=HTTPServer, handler_class=handler):
+    server_address = ('', 8000)
+    httpd = server_class(server_address, handler_class)
+    httpd.serve_forever()
+
+run()
