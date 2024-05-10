@@ -20,4 +20,4 @@ def remove(host, user, passw):
         ssh.close()
 
 
-remove('192.168.31.131', 'debian', '7492')
+remove('192.168.31.131', 'username', 'password')
