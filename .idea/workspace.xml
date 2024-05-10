@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="add structure project">
-      <change afterPath="$PROJECT_DIR$/microservice/proto/microservice.proto" afterDir="false" />
+    <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="add protoc">
+      <change afterPath="$PROJECT_DIR$/microservice/src/serv.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice/proto/microservice.proto.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add structure project" />
-    <option name="LAST_COMMIT_MESSAGE" value="add structure project" />
+    <MESSAGE value="add protoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="add protoc" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
