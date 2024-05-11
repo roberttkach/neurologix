@@ -1,0 +1,34 @@
+Index: learning-machine/api.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from http.server import BaseHTTPRequestHandler, HTTPServer\r\nimport json\r\n\r\nclass RequestHandler(BaseHTTPRequestHandler):\r\n    def do_POST(self):\r\n        content_length = int(self.headers['Content-Length'])\r\n        post_data = self.rfile.read(content_length)\r\n        data = json.loads(post_data)\r\n\r\n        self.send_response(200)\r\n        self.end_headers()\r\n        self.wfile.write(b\"Data received: \" + json.dumps(data).encode())\r\n\r\ndef handler(*args, **kwargs):\r\n    return RequestHandler(*args, **kwargs)\r\n\r\ndef run(server_class=HTTPServer, handler_class=handler):\r\n    server_address = ('', 8000)\r\n    httpd = server_class(server_address, handler_class)\r\n    httpd.serve_forever()\r\n\r\nrun()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/learning-machine/api.py b/learning-machine/api.py
+--- a/learning-machine/api.py	(revision 3d56eb9157c19a7eacdc2586d5881fe466d6bd0c)
++++ b/learning-machine/api.py	(date 1715334669448)
+@@ -1,6 +1,7 @@
+ from http.server import BaseHTTPRequestHandler, HTTPServer
+ import json
+ 
++
+ class RequestHandler(BaseHTTPRequestHandler):
+     def do_POST(self):
+         content_length = int(self.headers['Content-Length'])
+@@ -11,12 +12,15 @@
+         self.end_headers()
+         self.wfile.write(b"Data received: " + json.dumps(data).encode())
+ 
++
+ def handler(*args, **kwargs):
+     return RequestHandler(*args, **kwargs)
+ 
++
+ def run(server_class=HTTPServer, handler_class=handler):
+     server_address = ('', 8000)
+     httpd = server_class(server_address, handler_class)
+     httpd.serve_forever()
+ 
++
+ run()
