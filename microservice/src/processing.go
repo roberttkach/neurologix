@@ -1,5 +1,6 @@
 package src
 
+/*
 import (
 	"log"
 	pb "microservice/proto"
@@ -12,3 +13,4 @@ func Process() {
 	}
 	log.Printf("Processed Image ID: %s", r2.GetProcessedImageId())
 }
+*/

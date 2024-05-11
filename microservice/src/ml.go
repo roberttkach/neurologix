@@ -1,5 +1,6 @@
 package src
 
+/*
 import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -7,6 +8,7 @@ import (
 	"google.golang.org/grpc"
 	pb "microservice/proto"
 )
+
 
 type processServer struct {
 	db          *mongo.Database
@@ -54,3 +56,4 @@ func (s *processServer) ProcessImage(ctx context.Context, in *pb.ProcessImageReq
 
 	return &pb.ProcessImageResponse{ProcessedImageId: uploadStream.FileID.(primitive.ObjectID).Hex()}, nil
 }
+*/
