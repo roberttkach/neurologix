@@ -1,16 +1,24 @@
-package src
-
-/*
-import (
-	"log"
-	pb "microservice/proto"
-)
-
-func Process() {
-	r2, err := c.ProcessImage(ctx, &pb.ProcessImageRequest{ImageId: r.GetImageId()})
-	if err != nil {
-		log.Fatalf("Не удалось обработать изображение: %v", err)
+func processImage(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "POST" {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		return
 	}
-	log.Printf("Processed Image ID: %s", r2.GetProcessedImageId())
+
+	file, _, err := r.FormFile("file")
+	if err != nil {
+		http.Error(w, "Error retrieving the file", http.StatusBadRequest)
+		return
+	}
+	defer file.Close()
+
+	fileBytes, err := ioutil.ReadAll(file)
+	if err != nil {
+		http.Error(w, "Error reading the file", http.StatusBadRequest)
+		return
+	}
+
+	// Здесь вы можете добавить код для обработки изображения
+	processedImage := processImage(fileBytes)
+
+	w.Write(processedImage)
 }
-*/

@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ml/models/gRPC/pre-processing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ml/models/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/monitoring_ml.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monitoring_ml.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2024_14_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2024_14_27__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre-processing-grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre-processing.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre_processing_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre_processing_pb2_grpc.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/roberttkach/monitoring_ml.git&quot;,
-    &quot;accountId&quot;: &quot;8243ca5d-e95a-4c51-84fc-a8a7db6f4b96&quot;
+    &quot;accountId&quot;: &quot;948bd19d-f6c7-49c1-bfad-605c3ada9c24&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -54,35 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Python.classification.executor": "Run",
-    "Python.detecting.executor": "Run",
-    "Python.model.executor": "Run",
-    "Python.pre-processing.executor": "Run",
-    "Python.svm-classification.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/code/python/oge",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "tools.buf",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/monitoring_ml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\monitoring_ml\ml\models\gRPC" />
       <recent name="C:\Users\diner\PycharmProjects\monitoring_ml\ml\models\saves" />
     </key>
   </component>
@@ -108,6 +96,14 @@
       <workItem from="1715436528866" duration="1146000" />
       <workItem from="1715443924574" duration="6330000" />
       <workItem from="1715452550484" duration="27000" />
+      <workItem from="1715489478112" duration="34000" />
+      <workItem from="1715489535537" duration="3844000" />
+      <workItem from="1715494172952" duration="290000" />
+      <workItem from="1715494489206" duration="101000" />
+      <workItem from="1715494637247" duration="63000" />
+      <workItem from="1715507187418" duration="123000" />
+      <workItem from="1715507440793" duration="27000" />
+      <workItem from="1715507501510" duration="788000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/main'">
       <option name="closed" value="true" />
