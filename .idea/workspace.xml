@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/ml/models/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/monitoring_ml.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monitoring_ml.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre-processing-grpc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre-processing.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre_processing_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/models/gRPC/pre_processing_pb2_grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2024_14_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2024_14_27__Changes_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +33,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/roberttkach/monitoring_ml.git&quot;,
-    &quot;accountId&quot;: &quot;948bd19d-f6c7-49c1-bfad-605c3ada9c24&quot;
+    &quot;url&quot;: &quot;https://github.com/roberttkach/neurologix.git&quot;,
+    &quot;accountId&quot;: &quot;8243ca5d-e95a-4c51-84fc-a8a7db6f4b96&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -104,6 +96,8 @@
       <workItem from="1715507187418" duration="123000" />
       <workItem from="1715507440793" duration="27000" />
       <workItem from="1715507501510" duration="788000" />
+      <workItem from="1715530545798" duration="44000" />
+      <workItem from="1715530606048" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/main'">
       <option name="closed" value="true" />

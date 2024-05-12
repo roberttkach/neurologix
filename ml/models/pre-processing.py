@@ -1,57 +1,18 @@
-import cv2
-import numpy as np
+from PIL import Image, ImageDraw
+import pytesseract
 
-# Загрузка изображения
-image = cv2.imread('./data/photo.jpg', 0)
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+image = Image.open('./data/text.png')
 
-# Уменьшение шума
-blurred = cv2.GaussianBlur(image, (5, 5), 0)
+text = pytesseract.image_to_string(image, lang='rus')
+print(text)
 
-# Бинаризация изображения
-_, binary = cv2.threshold(blurred, 127, 255, cv2.THRESH_BINARY_INV)
+boxes = pytesseract.image_to_boxes(image, lang='rus')
 
-# Нахождение контуров
-contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+draw = ImageDraw.Draw(image)
+h = image.height
+for b in boxes.splitlines():
+    b = b.split(' ')
+    draw.rectangle([int(b[1]), h - int(b[4]), int(b[3]), h - int(b[2])], outline='green')
 
-# Находим контур с максимальной площадью
-max_area = 0
-max_contour = None
-for contour in contours:
-    area = cv2.contourArea(contour)
-    if area > max_area:
-        max_area = area
-        max_contour = contour
-
-# Находим прямоугольник, описывающий этот контур
-x, y, w, h = cv2.boundingRect(max_contour)
-
-# Обрезаем изображение до этого прямоугольника
-cropped = binary[y:y+h, x:x+w]
-
-# Инвертируем обрезанное изображение
-inverted = cv2.bitwise_not(cropped)
-
-# Находим контуры на инвертированном изображении
-contours, _ = cv2.findContours(inverted, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-# Находим контур с максимальной площадью на инвертированном изображении
-max_area = 0
-max_contour = None
-for contour in contours:
-    area = cv2.contourArea(contour)
-    if area > max_area:
-        max_area = area
-        max_contour = contour
-
-# Находим прямоугольник, описывающий этот контур
-x, y, w, h = cv2.boundingRect(max_contour)
-
-# Обрезаем инвертированное изображение до этого прямоугольника
-final_cropped = inverted[y:y+h, x:x+w]
-
-# Инвертируем обрезанное изображение обратно
-final_cropped = cv2.bitwise_not(final_cropped)
-
-cv2.imshow('Final Cropped', final_cropped)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+image.show()
