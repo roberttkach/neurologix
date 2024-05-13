@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/API/model_sevenz.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/monitoring_ml.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monitoring_ml.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/model_zip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remove.py" beforeDir="false" afterPath="$PROJECT_DIR$/remove.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tohost.py" beforeDir="false" afterPath="$PROJECT_DIR$/tohost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/model_sevenz.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/model_sevenz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/model_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/model_zip.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +36,6 @@
     </option>
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../Program Files/Go" />
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/main" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,16 +48,13 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/roberttkach/neurologix.git&quot;,
-    &quot;accountId&quot;: &quot;7d9eee9e-7cd5-4346-8013-e8537f37148d&quot;
+    &quot;accountId&quot;: &quot;8243ca5d-e95a-4c51-84fc-a8a7db6f4b96&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="ProblemsViewState">
-    <option name="showPreview" value="true" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -74,26 +66,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/PycharmProjects/neurologix&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.model_sevenz.executor": "Run",
+    "Python.model_zip.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/PycharmProjects/neurologix",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\diner\PycharmProjects\monitoring_ml\ml\models\saves" />
@@ -133,7 +127,6 @@
       <workItem from="1715530606048" duration="3000" />
       <workItem from="1715530617657" duration="3412000" />
       <workItem from="1715538201677" duration="28000" />
-      <workItem from="1715572665772" duration="3065000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/main'">
       <option name="closed" value="true" />
@@ -167,15 +160,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715538149789</updated>
     </task>
-    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'">
-      <option name="closed" value="true" />
-      <created>1715575834089</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715575834089</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,10 +174,12 @@
     <settings-migrated>true</settings-migrated>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/monitoring_ml$classification.coverage" NAME="classification Coverage Results" MODIFIED="1715418418042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
-    <SUITE FILE_PATH="coverage/monitoring_ml$model.coverage" NAME="model Coverage Results" MODIFIED="1715374400052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/gen" />
-    <SUITE FILE_PATH="coverage/monitoring_ml$detecting.coverage" NAME="detecting Coverage Results" MODIFIED="1715414908782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
     <SUITE FILE_PATH="coverage/monitoring_ml$pre_processing.coverage" NAME="pre-processing Coverage Results" MODIFIED="1715452473200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
+    <SUITE FILE_PATH="coverage/monitoring_ml$detecting.coverage" NAME="detecting Coverage Results" MODIFIED="1715414908782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
     <SUITE FILE_PATH="coverage/monitoring_ml$svm_classification.coverage" NAME="svm-classification Coverage Results" MODIFIED="1715376467915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
+    <SUITE FILE_PATH="coverage/neurologix$model_sevenz.coverage" NAME="model_sevenz Coverage Results" MODIFIED="1715577837885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API" />
+    <SUITE FILE_PATH="coverage/monitoring_ml$model.coverage" NAME="model Coverage Results" MODIFIED="1715374400052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/gen" />
+    <SUITE FILE_PATH="coverage/monitoring_ml$classification.coverage" NAME="classification Coverage Results" MODIFIED="1715418418042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
+    <SUITE FILE_PATH="coverage/neurologix$model_zip.coverage" NAME="model_zip Coverage Results" MODIFIED="1715577907417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API" />
   </component>
 </project>
