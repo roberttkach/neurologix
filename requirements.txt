@@ -1,5 +1,6 @@
 fastapi==0.111.0
 py7zr==0.21.0
+rarfile~=4.2
 uvicorn==0.29.0
-paramiko==latest
-scp==latest
+paramiko~=3.4.0
+scp~=0.14.5
