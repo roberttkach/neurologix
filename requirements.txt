@@ -1,0 +1,5 @@
+fastapi==0.111.0
+py7zr==0.21.0
+uvicorn==0.29.0
+paramiko==latest
+scp==latest

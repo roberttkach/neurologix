@@ -16,5 +16,5 @@ def tohost(host, user, passw, frm, to):
         ssh.close()
 
 
-tohost('192.168.31.131', 'debian', '7492', 'C:/Users/diner/PycharmProjects/monitoring_ml',
-       '/home/debian/github')
+tohost('localhost', 'ubuntubob', '7492', 'C:/PycharmProjects/neurologix',
+       '/home/ubuntubob')
