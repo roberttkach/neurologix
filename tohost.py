@@ -16,5 +16,5 @@ def tohost(host, user, passw, frm, to):
         ssh.close()
 
 
-tohost('localhost', 'ubuntubob', '7492', 'C:/PycharmProjects/neurologix',
+tohost('localhost', 'ubuntubob', '1234', 'C:/PycharmProjects/neurologix',
        '/home/ubuntubob')

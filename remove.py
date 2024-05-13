@@ -20,4 +20,4 @@ def remove(host, user, passw):
         ssh.close()
 
 
-remove('localhost', 'ubuntubob', '7492')
+remove('localhost', 'ubuntubob', '1234')
