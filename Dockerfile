@@ -1,16 +1,20 @@
+# Используйте образ Ubuntu 24.04
 FROM ubuntu:24.04
 
-RUN apt-get update && apt-get install -y python3.12.3 python3-pip
-RUN apt-get update && apt-get install -y golang-1.22.2
-RUN apt-get update && apt-get install -y mongodb
+# Обновите систему и установите необходимые пакеты
+RUN apt-get update -y && apt-get install -y sudo wget
 
-COPY requirements.txt ./
-COPY go.mod ./
+# Копируйте файл debian-based-configs.sh из папки bash в контейнер
+COPY bash/debian-based-configs.sh .
 
-RUN pip3 install -r requirements.txt
+# Дайте разрешение на выполнение файла
+RUN chmod +x debian-based-configs.sh
 
-RUN go mod download
+# Запустите файл debian-based-configs.sh
+RUN ./debian-based-configs.sh
 
-COPY . .
+# Копируйте main.py в контейнер
+COPY main.py .
 
+# Запустите main.py
 CMD ["python3", "main.py"]
