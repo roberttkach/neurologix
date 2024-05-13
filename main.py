@@ -1,21 +1,20 @@
 from fastapi import FastAPI
 from uvicorn import run
-from API.model_zip import app as zip_app
-from API.model_sevenz import app as sevenz_app
+from API.archive import router as archive_router
 
 app = FastAPI()
+
 
 @app.get("/")
 def read_root():
     return {
-        "message": "Добро пожаловать на мой веб-сайт!",
-        "instructions": "Используйте /model для доступа к модели.",
+        "message": "Добро пожаловать в NeuroLogix!",
+        "instructions": "Используйте /archive для загрузки своей модели в новый контейнер.",
         "author": "Ваше имя"
     }
 
 
-app.mount("/model", zip_app)
-app.mount("/model", sevenz_app)
+app.include_router(archive_router, prefix="/archive")
 
 if __name__ == "__main__":
     run(app)
