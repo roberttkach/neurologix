@@ -1,27 +1,16 @@
-from fastapi import FastAPI, UploadFile, File
-from PIL import Image
-import io
-from classification import process_image
-from classification import process_image
+from fastapi import FastAPI, UploadFile, HTTPException, File
+from fastapi.responses import JSONResponse
+import shutil
+import os
 
 app = FastAPI()
 
-@app.post("/upload")
-async def upload_file(file: UploadFile = File(...)):
-    # Чтение изображения из файла
-    image = await file.read()
 
-    # Отправка изображения на сервер Go
-    response = requests.post('http://localhost:8080/upload', files={'file': image})
-
-    return {"image_id": response.json()['image_id']}
-
-@app.post("/process")
-async def process_image_endpoint(file: UploadFile = File(...)):
-    image_stream = io.BytesIO(await file.read())
-    image_stream.seek(0)
-    file_bytes = np.asarray(bytearray(image_stream.read()), dtype=np.uint8)
-
-    processed_image = process_image(file_bytes)
-
-    return {"image": processed_image}
+@app.post("/uploadzip/")
+async def upload_zip(file: UploadFile = File(...)):
+    if file.filename.endswith(".zip"):
+        with open(os.path.join("your_directory", file.filename), 'wb+') as f:
+            shutil.copyfileobj(file.file, f)
+        return JSONResponse(status_code=200, content={"message": "File uploaded successfully"})
+    else:
+        raise HTTPException(status_code=400, detail="Invalid file type. Please upload a zip file.")
