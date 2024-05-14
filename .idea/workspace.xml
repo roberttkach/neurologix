@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="Merge remote-tracking branch 'origin/main'" />
+    <list default="true" id="baa03bb8-c0b0-4e54-911b-676933a72c0b" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/archive.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/archive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/neurologix/cache/rere.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/neurologix/containers/rere/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/neurologix/containers/rere/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/neurologix/containers/rere/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monngoDB/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/mongo/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/cache/model.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/containers/model3/model/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/containers/model3/model/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/containers/models/model/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/containers/models/model/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/containers/modelsz/model/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neurologix/containers/modelsz/model/train.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,12 +55,12 @@
     &quot;assignee&quot;: &quot;Hallexz&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/roberttkach/neurologix.git",
-    "accountId": "8243ca5d-e95a-4c51-84fc-a8a7db6f4b96"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/roberttkach/neurologix.git&quot;,
+    &quot;accountId&quot;: &quot;8243ca5d-e95a-4c51-84fc-a8a7db6f4b96&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -230,8 +246,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/monitoring_ml$classification.coverage" NAME="classification Coverage Results" MODIFIED="1715418418042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
     <SUITE FILE_PATH="coverage/neurologix$model_zip.coverage" NAME="model_zip Coverage Results" MODIFIED="1715577907417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API" />
-    <SUITE FILE_PATH="coverage/neurologix$archive.coverage" NAME="archive Coverage Results" MODIFIED="1715580494528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API" />
-    <SUITE FILE_PATH="coverage/neurologix$main.coverage" NAME="main Coverage Results" MODIFIED="1715636889209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neurologix$archive.coverage" NAME="archive Coverage Results" MODIFIED="1715661168682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API" />
+    <SUITE FILE_PATH="coverage/neurologix$main.coverage" NAME="main Coverage Results" MODIFIED="1715661170883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/monitoring_ml$detecting.coverage" NAME="detecting Coverage Results" MODIFIED="1715414908782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
     <SUITE FILE_PATH="coverage/monitoring_ml$model.coverage" NAME="model Coverage Results" MODIFIED="1715374400052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/gen" />
     <SUITE FILE_PATH="coverage/monitoring_ml$pre_processing.coverage" NAME="pre-processing Coverage Results" MODIFIED="1715452473200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ml/models" />
