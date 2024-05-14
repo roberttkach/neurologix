@@ -18,5 +18,5 @@ async def async_update_counter():
         await loop.run_in_executor(pool, update_counter)
 
 
-start_http_server(8000)
+start_http_server(8080)
 asyncio.run(async_update_counter())

@@ -27,7 +27,7 @@ app.include_router(archive_router)
 
 
 async def run_app():
-    config = Config(app=app, host="localhost", port=8000)
+    config = Config(app=app, host="localhost", port=8080)
     server = Server(config)
     logger.info(f"FastAPI server started on port {config.port}.")
     await server.serve()

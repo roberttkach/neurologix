@@ -24,6 +24,7 @@ def create_dockerfile(path: Path):
         f.write("RUN pip install -r requirements.txt\n")
         f.write("CMD [\"python\", \"train.py\"]\n")
 
+
 @router.post("/archive")
 async def upload(file: UploadFile = File(...), name: str = Form(...)):
     logging.info(f"Received file {file.filename}")
