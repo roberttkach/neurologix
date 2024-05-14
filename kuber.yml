@@ -1,60 +1,62 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: python-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: python-app
   template:
     metadata:
       labels:
-        app: web
+        app: python-app
     spec:
       containers:
-        - name: web
-          image: microservice
+        - name: python-app
+          image: python:3.12.3
           ports:
-            - containerPort: 5051
+            - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: web
+  name: python-app
 spec:
   selector:
-    app: web
+    app: python-app
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 5051
+      targetPort: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: db
+  name: mongo-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: db
+      app: mongo-db
   template:
     metadata:
       labels:
-        app: db
+        app: mongo-db
     spec:
       containers:
-        - name: db
-          image: mongo
+        - name: mongo-db
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: db
+  name: mongo-db
 spec:
   selector:
-    app: db
+    app: mongo-db
   ports:
     - protocol: TCP
       port: 27017
