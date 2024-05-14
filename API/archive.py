@@ -1,4 +1,5 @@
 import logging
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -50,15 +51,22 @@ async def upload(file: UploadFile = File(...), name: str = Form(...)):
                 for ext, archive in file_types.items():
                     if file.filename.endswith(ext):
                         with archive(file_location, 'r') as arch:
-                            if ext == ".tar.gz":
-                                namelist = arch.getnames()
-                            else:
-                                namelist = arch.namelist()
-
-                            if "requirements.txt" not in namelist or "train.py" not in namelist:
-                                raise HTTPException(status_code=400,
-                                                    detail=f"{ext} file must contain requirements.txt and train.py.")
                             arch.extractall(path=extract_location)
+                            data_location = Path(extract_location) / file.filename
+
+                            if os.path.exists(data_location):
+                                files = os.listdir(data_location)
+                                for file in files:
+                                    shutil.move(os.path.join(data_location, file), extract_location)
+
+                            print(extract_location)
+
+                            required_files = ["requirements.txt", "train.py"]
+                            if not all(os.path.exists(os.path.join(extract_location, file)) for file in required_files):
+                                dir_content = os.listdir(extract_location)
+                                dir_content_str = ', '.join(dir_content)
+                                raise HTTPException(status_code=400,
+                                                    detail=f"{ext} file must contain requirements.txt and train.py. Current directory content: {dir_content_str}")
                         break
                 else:
                     raise HTTPException(status_code=400, detail="File type not supported.")

@@ -1,2 +1,6 @@
-2024-05-14 12:02:51,999 - INFO - Prometheus started.
-2024-05-14 12:02:52,339 - INFO - FastAPI server started on port 8000.
+2024-05-14 12:57:02,149 - INFO - Prometheus started.
+2024-05-14 12:57:02,634 - INFO - FastAPI server started on port 8000.
+2024-05-14 12:57:07,683 - INFO - Received file model.zip
+2024-05-14 12:59:09,852 - INFO - Prometheus started.
+2024-05-14 12:59:10,337 - INFO - FastAPI server started on port 8000.
+2024-05-14 12:59:16,609 - INFO - Received file model.zip
