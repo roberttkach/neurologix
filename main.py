@@ -23,11 +23,11 @@ def read_root():
     }
 
 
-app.include_router(archive_router, prefix="/archive")
+app.include_router(archive_router)
 
 
 async def run_app():
-    config = Config(app=app, host="0.0.0.0", port=8000)
+    config = Config(app=app, host="localhost", port=8000)
     server = Server(config)
     logger.info(f"FastAPI server started on port {config.port}.")
     await server.serve()
@@ -35,7 +35,7 @@ async def run_app():
 
 def run_prometheus():
     logger.info("Prometheus started.")
-    os.system("python prometheus.py")
+    os.system("python metrics/prometheus.py")
 
 
 async def main():

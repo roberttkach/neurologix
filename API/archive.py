@@ -22,7 +22,7 @@ def create_dockerfile(path: Path):
         f.write("CMD [\"python\", \"train.py\"]\n")
 
 
-@router.post("/archive/")
+@router.post("/archive")
 async def upload(file: UploadFile = File(...), name: str = Form(...)):
     logging.info(f"Received file {file.filename}")
     if file.filename.endswith((".zip", ".7z", ".rar", ".tar.gz")):
