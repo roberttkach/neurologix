@@ -11,6 +11,8 @@ import py7zr
 import rarfile
 import tarfile
 
+from minikube import process_container_dir
+
 router = APIRouter()
 
 
@@ -21,7 +23,6 @@ def create_dockerfile(path: Path):
         f.write("WORKDIR /app\n")
         f.write("RUN pip install -r requirements.txt\n")
         f.write("CMD [\"python\", \"train.py\"]\n")
-
 
 @router.post("/archive")
 async def upload(file: UploadFile = File(...), name: str = Form(...)):
@@ -77,13 +78,21 @@ async def upload(file: UploadFile = File(...), name: str = Form(...)):
 
             create_dockerfile(extract_location)
 
+            if not (extract_location / "Dockerfile").exists():
+                raise HTTPException(status_code=500, detail="Dockerfile creation failed.")
+
             build_result = subprocess.run(f"docker build -t {name.lower()} {extract_location}", shell=True, check=False)
             if build_result.returncode != 0:
                 raise HTTPException(status_code=500, detail="Docker build failed.")
 
+            try:
+                process_container_dir(str(extract_location), name.lower())
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=str(e))
+
             return JSONResponse(status_code=200,
                                 content={
-                                    "message": f"File {name} uploaded, unzipped, and Docker image built successfully."})
+                                    "message": f"File {name} uploaded, unzipped, Docker image built, and Kubernetes manifests created successfully."})
         except Exception as e:
             raise HTTPException(status_code=500, detail=str(e))
         finally:
