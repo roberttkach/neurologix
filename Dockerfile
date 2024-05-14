@@ -6,5 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-# Запустите main.py
+EXPOSE 8000
+
 CMD ["python3", "k8s_script.py", "main.py"]

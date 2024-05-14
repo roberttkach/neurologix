@@ -1,9 +1,7 @@
 import os
 import subprocess
 
-
 containers_dir = "neurologix/containers"
-
 
 
 def generate_k8s_manifest(container_name):
