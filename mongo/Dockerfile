@@ -2,4 +2,6 @@ FROM mongo:latest
 
 RUN mkdir -p /data/db
 
-CMD ["mongod"]
+EXPOSE 27017
+
+CMD ["mongod"]s
