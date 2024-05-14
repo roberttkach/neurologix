@@ -8,7 +8,7 @@ uploaded_files_total = Counter('uploaded_files_total', 'Total uploaded files')
 
 
 def update_counter():
-    folders = [name for name in os.listdir('containers/') if os.path.isdir(os.path.join('containers/', name))]
+    folders = [name for name in os.listdir('containers') if os.path.isdir(os.path.join('containers', name))]
     uploaded_files_total.inc(len(folders))
 
 
