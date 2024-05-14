@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 import zipfile
 import py7zr
 import rarfile
-
+import tarfile
 
 router = APIRouter()
 
@@ -25,7 +25,7 @@ def create_dockerfile(path: Path):
 @router.post("/archive/")
 async def upload(file: UploadFile = File(...), name: str = Form(...)):
     logging.info(f"Received file {file.filename}")
-    if file.filename.endswith((".zip", ".7z", ".rar")):
+    if file.filename.endswith((".zip", ".7z", ".rar", ".tar.gz")):
         dir_path = Path("neurologix/containers") / name
         if dir_path.exists():
             raise HTTPException(status_code=400, detail="Container with this name already exists.")
@@ -43,13 +43,19 @@ async def upload(file: UploadFile = File(...), name: str = Form(...)):
                 file_types = {
                     ".zip": zipfile.ZipFile,
                     ".7z": py7zr.SevenZipFile,
-                    ".rar": rarfile.RarFile
+                    ".rar": rarfile.RarFile,
+                    ".tar.gz": tarfile.open
                 }
 
                 for ext, archive in file_types.items():
                     if file.filename.endswith(ext):
                         with archive(file_location, 'r') as arch:
-                            if "requirements.txt" not in arch.namelist() or "train.py" not in arch.namelist():
+                            if ext == ".tar.gz":
+                                namelist = arch.getnames()
+                            else:
+                                namelist = arch.namelist()
+
+                            if "requirements.txt" not in namelist or "train.py" not in namelist:
                                 raise HTTPException(status_code=400,
                                                     detail=f"{ext} file must contain requirements.txt and train.py.")
                             arch.extractall(path=extract_location)
@@ -66,6 +72,7 @@ async def upload(file: UploadFile = File(...), name: str = Form(...)):
                 raise HTTPException(status_code=500, detail="Docker build failed.")
 
             return JSONResponse(status_code=200,
-                                content={"message": f"File {name} uploaded, unzipped, and Docker image built successfully."})
+                                content={
+                                    "message": f"File {name} uploaded, unzipped, and Docker image built successfully."})
     else:
-        raise HTTPException(status_code=400, detail="Invalid file type. Please upload a zip, 7z or rar file.")
+        raise HTTPException(status_code=400, detail="Invalid file type. Please upload a zip, 7z, rar, or tar.gz file.")
