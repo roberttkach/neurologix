@@ -16,7 +16,7 @@ spec:
         - name: api
           image: api:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
 ---
 apiVersion: v1
 kind: Service
@@ -27,8 +27,8 @@ spec:
     app: api
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 8000
+      targetPort: 8000
 ---
 apiVersion: apps/v1
 kind: Deployment
