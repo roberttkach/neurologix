@@ -1,11 +1,9 @@
 import logging
 import os
-
 from fastapi import FastAPI
 from uvicorn import Config, Server
 from API.archive import router as archive_router
 import asyncio
-from concurrent.futures import ThreadPoolExecutor
 
 app = FastAPI()
 
@@ -16,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 @app.get("/")
 def read_root():
+    logger.info("Root endpoint hit.")
     return {
         "message": "Welcome to NeuroLogix!",
         "instructions": "Use /archive to upload your model into a new container.",
@@ -26,23 +25,16 @@ def read_root():
 app.include_router(archive_router)
 
 
-async def run_app():
-    config = Config(app=app, host="0.0.0.0", port=8000)
-    server = Server(config)
-    logger.info(f"FastAPI server started on port {config.port}.")
-    await server.serve()
-
-
-def run_prometheus():
-    logger.info("Prometheus started.")
-    os.system("python metrics/prometheus.py")
-
-
 async def main():
-    loop = asyncio.get_running_loop()
-    with ThreadPoolExecutor() as pool:
-        await loop.run_in_executor(pool, run_prometheus)
-    await run_app()
+    global port
+    try:
+        port = int(os.getenv('PORT', 8000))
+        config = Config(app=app, host="0.0.0.0", port=port)
+        server = Server(config)
+        logger.info(f"FastAPI server started on port {config.port}.")
+        await server.serve()
+    except Exception as e:
+        logger.error(f"Error starting FastAPI server on port {port}: {e}")
 
 
 if __name__ == "__main__":
